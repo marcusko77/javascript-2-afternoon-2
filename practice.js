@@ -34,7 +34,9 @@ var arr = [40,50,60];
 
 //Code Here
 
-
+function last(arr){
+  return arr[arr.length-1];
+}
 
 ////////// PROBLEM 3 //////////
 
@@ -64,7 +66,11 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 
 //Code Here
 
-
+function reversedLooper(letters){
+  for(var i = letters.length -1;i >= 0; i--){
+    alert(letters[i]);
+  }
+}
 
 ////////// PROBLEM 5 //////////
 
@@ -96,7 +102,22 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 //Code Here
 
-
+function divider(numbersArray){
+  var newArray = [
+    [],
+    []
+  ]
+  for(var i = 0; i < numbersArray.length; i++){
+    if(numbersArray[i] % 2 === 0){
+      newArray[0].push(numbersArray[i])
+    }
+    else{
+      newArray[1].push(numbersArray[i]);
+    }
+  }
+  return newArray
+ }
+console.log(divider(numbersArray));
 
 ////////// PROBLEM 7 //////////
 
@@ -144,8 +165,21 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Code Here
 
+function removeItem(myGroceryList, item){
+  if(myGroceryList.includes(item)) {
+    var index = myGroceryList.indexOf(item);
+    myGroceryList.splice(index,1)
+  
+  }
+  return myGroceryList;
+}
 
+function addItem(myGroceryList, item){
+    myGroceryList.push(item);
+   return myGroceryList;
+}
 
+addItem(myGroceryList,'chips');
 ////////// PROBLEM 9 //////////
 
 /*
@@ -169,7 +203,13 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
-
+function addTen(numbers){
+  var newArray = []
+  for(var i = 0;i < numbers.length; i++){
+    newArray.push(Number(numbers[i]) + 10);
+  }
+  return newArray;
+}
 
 
 ////////// PROBLEM 11 //////////
@@ -247,6 +287,8 @@ var colt = {
 
 //Code Here
 
+devMountainEmployees.push(tyler, cahlan, ryan, colt);
+console.log(devMountainEmployees)
 
 
 /*
@@ -256,7 +298,13 @@ var colt = {
 
 //Code Here
 
-
+for(i = 0; i < devMountainEmployees.length; i++){
+  if(devMountainEmployees[i].name == 'Cahlan'){
+    devMountainEmployees.splice(i,1);
+  }
+  
+}
+console.log(devMountainEmployees)
 
 ////////// PROBLEM 13 //////////
 
